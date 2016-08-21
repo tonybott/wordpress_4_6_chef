@@ -16,8 +16,8 @@
 
 define('WP_REDIS_HOST', 'wordpress.oolfcl.0001.usw2.cache.amazonaws.com');
  
-define('WP_HOME','http://wordpress46-666424013.us-west-2.elb.amazonaws.com');
-define('WP_SITEURL','http://wordpress46-666424013.us-west-2.elb.amazonaws.com');
+define('WP_HOME','');
+define('WP_SITEURL','');
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
@@ -33,7 +33,7 @@ define('DB_PASSWORD', 'wordpress');
 define('DB_HOST', 'wordpress.czxbv2qci2yn.us-west-2.rds.amazonaws.com');
 
 /** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8');
+define('DB_CHARSET', 'utf8mb4');
 
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
@@ -47,14 +47,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'Uu* 530)B[w+]9(>%),{;UJp9}u>WpkiruStG{+E7!u `9])&G|m@ikzxvhdp5r7');
-define('SECURE_AUTH_KEY',  'n&#9g0wN9V(YO*%UpyPQh0QmS< pJhH06)&`cK/Wzk-Q_5RW!$TWbP7WZysg48Ay');
-define('LOGGED_IN_KEY',    'EPF,fU16~NV[/:?tjOO,m,!ufo!lkJ#]sd`mg+@wB~rP.3$ m0$$M<e*;!c9i72D');
-define('NONCE_KEY',        '}2H^-y3zd:K`80.(2);)88_t1C}ZsZH<h[&pF<tqA29F4wAEuO>Onb`vItJNo2(3');
-define('AUTH_SALT',        '#=v9>OnVj8ICD-s-7U%5#u6MaA_,p|6CYC2_FrwZ&3HOsv!Bm`{abhry>u}`^=b$');
-define('SECURE_AUTH_SALT', '+5/,BcI [i1U.3T |X4W} &8n&yX@-YM&12rA-8Tw<f~_Lqj?AZuXy}~+AA@uUC+');
-define('LOGGED_IN_SALT',   'l>fb2me|IgD[Ev2$hfyoB(n:~Twl9jDME/er}JO[HO9Sy&1 _SBio+w,+o2OQFR+');
-define('NONCE_SALT',       '],`C?31N>Yitn:ERyJ0#E.l}hL &lVVIht:-SG):~$5#x4H.tgRZiSj$Rlh/z8*M');
+define('AUTH_KEY',         'K GefGjDsV!|3(I8xQ7:O|^9^ipW69~hCZ`7KBcr_tGSL$l<Lr#/5Mr[7A+eQ%_d');
+define('SECURE_AUTH_KEY',  'a/%^VyI`nTYsl sFD GtVAvdH-}!)EGX{Rc+lS{*yZ!Zs<DKcTA21ecrKFW$U!2>');
+define('LOGGED_IN_KEY',    ',2A5uGVW,zC#: 8)4r^3&_S}eCe^C55m@SB&NZwAY7GMoT}4h#TgBm+EN0QyQ*J0');
+define('NONCE_KEY',        '!l76*i=Yv{QX+|*Ls(Z1Rq_DFdlQrUd8-U.m^ORJ`)$17<6+>v_mx{n!l+/pAD){');
+define('AUTH_SALT',        'x:Uy|@xDK74[-NF4_U~=K8{Mx.^dDU:MN]}r8<y^Bo.gV<3nTU7CD#|1z>/:F>gc');
+define('SECURE_AUTH_SALT', 'IKWK2UWS)hc@hek,?@PQJhCG:XwI{o+VPW2(3nlT[UCa[_VO+1/hc`fz+EHai.?0');
+define('LOGGED_IN_SALT',   '=noTyPpYPfM+RBMSEh@( Qh@u>|0e0$hXHNtg4zp*-t.g(E2[0os2fwDGTKU&=s6');
+define('NONCE_SALT',       'dy{9lbbC6F,wnzc+L66PS%Cfhpg*ZRTGl|7keR/>]C`ac<Tha|1~}YQ+A:T*CH*t');
 
 /**#@-*/
 
@@ -74,6 +74,18 @@ $table_prefix  = 'wp_';
  * in their development environments.
  */
 define('WP_DEBUG', false);
+
+/*After EC2 setup  modified by adding multisite-subdirectory. */
+
+/* Multisite */
+define( 'WP_ALLOW_MULTISITE', true );
+
+define('MULTISITE', true);
+define('SUBDOMAIN_INSTALL', true);
+define('DOMAIN_CURRENT_SITE', 'administrator.net');
+define('PATH_CURRENT_SITE', '/');
+define('SITE_ID_CURRENT_SITE', 1);
+define('BLOG_ID_CURRENT_SITE', 1);
 
 /* That's all, stop editing! Happy blogging. */
 
