@@ -14,10 +14,10 @@
  * @package WordPress
  */
  
-define('WP_REDIS_HOST', 'wordpress.xrkhgu.0001.use1.cache.amazonaws.com');
+define('WP_REDIS_HOST', '__ELASTICACHE_NODE_ENDPOINT__');
 
-define('WP_HOME','http://d3nrn4mifuxcem.cloudfront.net');
-define('WP_SITEURL','http://d3nrn4mifuxcem.cloudfront.net');
+define('WP_HOME','__CLOUDFRONT_DOMAIN__');
+define('WP_SITEURL','__CLOUDFRONT_DOMAIN__');
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
@@ -27,7 +27,7 @@ define('DB_USER', 'wordpress');
 /** MySQL database password */
 define('DB_PASSWORD', 'wordpress');
 /** MySQL hostname */
-define('DB_HOST', 'wordpress.cqvglnwirn65.us-east-1.rds.amazonaws.com');
+define('DB_HOST', '__RDS_DATABASE_ENDPOINT');
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
 /** The Database Collate type. Don't change this if in doubt. */
@@ -41,14 +41,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'xUV{e6VN%TevpZKa.ri&s]:DI402aI8!V<Q5=N(GF|:bc~VDQ41+|O)S9-MK6iJU');
-define('SECURE_AUTH_KEY',  '>Jr.V`_7XM)H~86TXE.7#.udj0;mIMGB#M4onuE.>^(NDH;^l<O0ktayRB1x<>-4');
-define('LOGGED_IN_KEY',    '.4cV){Og.g&E--+_B+A&x6)wRY^fg*Y*chSJ~b60D`+bmyvr#S)hDuDW74eC iPm');
-define('NONCE_KEY',        'a:FU[eHA;u[MK@Vb~M@&s{eBJZ$(3F(3(0i)hE2xlO^<5k7xoi~mfy|VKaXfiWL&');
-define('AUTH_SALT',        'p|d03n;UL+115WMI(JH5TYpuj8S :%@{xJxL2.<wm#e,@p61&xre(pmwd;m#qJ$&');
-define('SECURE_AUTH_SALT', '^dqphX|+gb]b/p6ZAN.)id4S.pHda|mh`xAe<bA`%?0SNmobL|e$+(_2G OAI(k;');
-define('LOGGED_IN_SALT',   'S{N)8?US|`3HXq6Ou-23HFOuE:UK}&LSQ ,gDth$)3k }|$!5fxR [G4FC|Pa`wZ');
-define('NONCE_SALT',       'g<(`94TW`|I`W{Ed|`(g0r~9=FN>uzzaGcf[T$D|u4/}AWDbPNX5fD+iy3[Gji7!');
+define('AUTH_KEY',         'put your unique phrase here');
+define('SECURE_AUTH_KEY',  'put your unique phrase here');
+define('LOGGED_IN_KEY',    'put your unique phrase here');
+define('NONCE_KEY',        'put your unique phrase here');
+define('AUTH_SALT',        'put your unique phrase here');
+define('SECURE_AUTH_SALT', 'put your unique phrase here');
+define('LOGGED_IN_SALT',   'put your unique phrase here');
+define('NONCE_SALT',       'put your unique phrase here');
 /**#@-*/
 /**
  * WordPress Database Table prefix.
@@ -71,5 +71,4 @@ if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
-
 
